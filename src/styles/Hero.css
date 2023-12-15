@@ -1,0 +1,28 @@
+img {
+  width: 12em;
+  height: 12em;
+  animation: slideInFromBottom .75s ease-out;
+}
+h1 {
+  font-family: "Courgette", cursive;
+  color: black;
+  animation: slideInFromTop .75s ease-out;
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
