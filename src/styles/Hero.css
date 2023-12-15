@@ -1,12 +1,12 @@
 img {
   width: 12em;
   height: 12em;
-  animation: slideInFromBottom .75s ease-out;
+  animation: slideInFromBottom 1s ease-out;
 }
 h1 {
   font-family: "Courgette", cursive;
   color: black;
-  animation: slideInFromTop .75s ease-out;
+  animation: slideInFromTop 1s ease-out;
 }
 
 @keyframes slideInFromTop {
