@@ -13,11 +13,20 @@ const App = () => {
     setIsNavVisible(!isNavVisible);
     console.log(isNavVisible);
   }
+  const navItems = [
+    {name: 'Home'},
+    {name: 'About'},
+    {name: 'Contact'},
+    {name: 'Portfolio'},
+    {name: 'QnA'},
+    {name: 'Socials'},
+    {name: 'Contact'}
+  ]
   return (
     <>
       <Header logoPath = {Logo} toggleNav={toggleNav} />
       <Hero title = 'Krisell Bakes' heroPic = {heroPic} />
-      <NavigationBar toggleNav={toggleNav} isNavVisible={isNavVisible}/>
+      <NavigationBar items = {navItems} toggleNav={toggleNav} isNavVisible={isNavVisible}/>
     </>
   )
 }
