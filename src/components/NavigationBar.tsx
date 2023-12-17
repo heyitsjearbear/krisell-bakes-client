@@ -1,8 +1,10 @@
 import React from "react";
 import "../styles/NavigationBar.css";
+import { Link } from "react-router-dom";
 
 interface NavigationItem {
   name: string;
+  route: string
 }
 
 interface NavigationBarProps {
@@ -14,7 +16,7 @@ interface NavigationBarProps {
 const NavigationBar: React.FC<NavigationBarProps> = ({
   isNavVisible,
   toggleNav,
-  items
+  items,
 }) => {
   return (
     <nav className={`sidebar ${isNavVisible ? "visible" : ""}`}>
@@ -24,7 +26,9 @@ const NavigationBar: React.FC<NavigationBarProps> = ({
         </button>
         {items.map((item, index) => (
           <li key={index} className="nav-item">
-            {item.name}
+            <Link to={item.route} onClick={toggleNav}>
+              {item.name}
+            </Link>
           </li>
         ))}
       </ul>
